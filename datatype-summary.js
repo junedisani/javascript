@@ -29,3 +29,23 @@ let myFunction = function(){
     console.log("hello world")
 }
 console.log(typeof myFunction);
+
+//**************************************************************************** */
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myName = "juned"
+let anotherName = myName
+anotherName = "junedisani"
+console.log(myName);
+console.log(anotherName);
+
+ let user1 = {
+    user: "juned5",
+    age : "23"
+ }
+
+ let user2 = user1
+ user2.user = "junedisani04"
+ console.log(user1);
+ console.log(user2);
