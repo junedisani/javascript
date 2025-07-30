@@ -19,4 +19,4 @@ const eMail = "juned123@gmail.com";
 console.log(eMail.replace("gmail","yahoo")); // replaces the given value to other.
 
 console.log(eMail.includes("juned")); // inlcudes checks the words used or not (true/false)
-console.log(gameName.split(`-`));
+console.log(gameName.split(`-`)); // split is use to split the words.
