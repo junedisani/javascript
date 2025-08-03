@@ -2,17 +2,17 @@ let a = 10
 const b = 20
 var c = 30
 
-// if (true) {
-//     let a = 60
-//     const b = 40
-//     var c = 100
-//     console.log("inner ",a, b, c);
+if (true) {
+    let a = 60
+    const b = 40
+    var c = 100
+    console.log("inner ",a, b, c);
     
-// }
+}
 
-// console.log(a);
-// console.log(b);
-// console.log(c);
+console.log(a);
+console.log(b);
+console.log(c);
 
 
 function one(){
@@ -20,8 +20,8 @@ function one(){
 
     function two(){
         const website = "youtube"
-        // console.log(username);
-        // console.log(website);
+        console.log(username);
+        console.log(website);
     }
     two()
 }
@@ -32,11 +32,11 @@ if(true){
     const username = "juned"
     if(true){
         const website = " facebook"
-        // console.log(username + website);
+        console.log(username + website);
     }
-    // console.log(website);
+    console.log(website);
 }
-// console.log(username);
+console.log(username);
 
 // *************************  interesting **********************************
 
