@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARNING DOM</title>
+</head>
+<body style="background-color: #212121; color : #fff">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+    <script>
+        function addLanguage (langName){
+            const li = document.createElement("li");
+            li.innerHTML = `${langName}`
+            document.querySelector(".language").appendChild(li);
+        }
+        addLanguage("Ruby");
+        addLanguage("python");
+
+        function addOptiLanguage (langName) {
+            const li = document.createElement("li");
+            const addText = document.createTextNode(langName);
+            li.appendChild(addText);
+            document.querySelector(".language").appendChild(li);
+        }
+        addOptiLanguage("golang")
+        addOptiLanguage("java")
+
+        // edit
+
+        const lang = document.querySelector("li:nth-child(3)")
+        const newLang = document.createElement("li");
+        newLang.innerText = "typescript";
+        newLang.style.color= "orange"
+        lang.replaceWith(newLang);
+
+        // edit
+        const lang1 = document.querySelector("li:nth-child(1)");
+        lang1.outerHTML = "<li>goLang</li>"
+
+        // remove
+
+        const lastLang = document.querySelector("li:nth-child(5)");
+        lastLang.remove()
+    </script>
+</html>
