@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML EVENTS </title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <div>
+        <ul id="images">
+        <li><img width="150px" src="https://images.pexels.com/photos/30506033/pexels-photo-30506033.jpeg" alt="" id="oldhouse"></li>
+        <li> <img  width="150px" src="https://images.pexels.com/photos/33303626/pexels-photo-33303626.jpeg" alt="" id="watermelon"></li>
+        <li> <img  width="150px" src="https://images.pexels.com/photos/33118519/pexels-photo-33118519.jpeg" alt="" id="stadium"></li>
+        <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+    <script>
+       // <!-- document.getElementById("oldhouse").onclick = () => {
+       //     alert("old house hi hai re baba!")
+       // } -->
+
+        // type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget,
+        // clientX, clientY, screenY, screenY
+        // altKey, cltrKey, shiftKey, keyCode
+
+     //     document.getElementById("images").addEventListener('click',function (e){
+     //       console.log("clicked inside the ul");
+     //   }, false)
+
+     //   document.getElementById("oldhouse").addEventListener('click',function (e){
+     //       console.log("old house clicked");
+     //       e.stopPropagation();  // to stop the bubbling
+     //   }, false)
+
+       // document.getElementById("google").addEventListener("click", (e)=> {
+       //     console.log("Google clicked");
+       //     e.preventDefault();
+       //     e.stopPropagation();
+       // })
+        document.getElementById("images").addEventListener("click", (e)=>{
+            console.log(e.target.parentNode);
+            if(e.target.tagName === "IMG"){
+                console.log(e.target.id)
+                let removeIt = e.target.parentNode;
+                removeIt.remove();
+            }
+           // let removeIt = e.target.parentNode;
+           // removeIt.remove();
+            //removeIt.parentNode.removeChild(removeIt)
+        })
+    </script>
+</html>
